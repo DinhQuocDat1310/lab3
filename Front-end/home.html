@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+       
+
+        .formSearch .container {
+            padding: 16px;
+            background-color: white;
+        }
+
+        .formSearch input[type=text],
+        .formSearch input[type=number],
+        .formSearch input[type=date],
+        .formSearch select {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        .formSearch input[type=text]:focus,
+        .formSearch input[type=number]:focus,
+        .formSearch input[type=date]:focus,
+        .formSearch select {
+            background-color: #ddd;
+            outline: none;
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/header.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="header">
+        <a href="#" class="logo">Car Retal</a>
+        <div class="header-right">
+            <a href="login.html">Login</a>
+            <a class="active" href="#">Register</a>
+        </div>
+    </div>
+
+
+
+    <div style="margin-top: 20px;"></div>
+
+    <div style="margin: auto; width: 80%;">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-2">
+                <form>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalSearchByName">
+                        Search By Name
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="modalSearchByName" tabindex="-1" role="dialog"
+                        aria-labelledby="modalSearchByNameTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle"><b>Search By Name</b></h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="formSearch">
+                                        <div class="container">
+                                            <label for="name"><b>Name: </b></label>
+                                            <input type="text" placeholder="Enter Name..." name="searchName" id="name" required>
+
+                                            <label for="dateRent"><b>Date Rent: </b></label>
+                                            <input type="date" name="searchDateRent" id="dateRent" required>
+
+                                            <label for="dateReturn"><b>Date Return: </b></label>
+                                            <input type="date"  name="searchDateReturn" id="dateReturn" required>
+
+                                            <label for="quantity"><b>Quantity</b></label>
+                                            <input type="number" placeholder="Enter Quantity..." min="1" name="searchQuantity" id="quantity" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Search</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+            <div class="col-2"></div>
+            <div class="col-3">
+                <form>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                        data-target="#modalSearchByCategory">
+                        Search By Category
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="modalSearchByCategory" tabindex="-1" role="dialog"
+                        aria-labelledby="modalSearchByCategoryTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle"><b>Search By Category</b></h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="formSearch">
+                                        <div class="container">
+                                            <label for="category"><b>Category: </b></label>
+                                            <select name="searchCategory" id="category">
+                                                <option value="a">a</option>
+                                                <option value="a">a</option>
+                                                <option value="a">a</option>
+                                            </select>
+
+                                            <label for="dateRent"><b>Date Rent: </b></label>
+                                            <input type="date" name="searchDateRent" id="dateRent" required>
+
+                                            <label for="dateReturn"><b>Date Return: </b></label>
+                                            <input type="date"  name="searchDateReturn" id="dateReturn" required>
+
+                                            <label for="quantity"><b>Quantity</b></label>
+                                            <input type="number" placeholder="Enter Quantity..." min="1" name="searchQuantity" id="quantity" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Search</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 20px;"></div>
+
+    <div style="margin: auto; width: 60%;">
+        <div class="card-group">
+            <div class="card">
+                <img class="card-img-top"
+                    src="https://cdn.baogiaothong.vn/upload/images/2019-4/article_img/2019-10-30/anh-ben-hong-1572444626-width1200height800.jpg"
+                    alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Name</h5>
+                    <p class="card-text">Color: </p>
+                    <p class="card-text">Year: </p>
+                </div>
+                
+                    <div class="card-footer">
+                        Start Date: <small class="text-muted"><input type="date" min="2021-03-01" min="today" name=""
+                                id="" required></small>
+                    </div>
+                    <div class="card-footer">
+                        End Date: <small class="text-muted"><input type="date" name="" id=""></small>
+                    </div><form action="abvc" method="get" onclick="return confirm('Are you sure you want to delete this item?')">
+                        <button type="submit">a</button>
+                    </form>
+                    
+                </form>
+            </div>
+            <div class="card">
+                <img class="card-img-top"
+                    src="https://images.unsplash.com/photo-1552561040-3ff08bed3eba?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+                    alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    Start Date: <small class="text-muted"><input type="date" name="" id=""></small>
+                </div>
+                <div class="card-footer">
+                    End Date: <small class="text-muted"><input type="date" name="" id=""></small>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="https://www.carscoops.com/wp-content/uploads/2020/05/2021-Kia-Rio-6.jpg"
+                    alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional
+                        content. This card has even longer content than the first to show that equal height action.</p>
+                </div>
+                <div class="card-footer">
+                    Start Date: <small class="text-muted"><input type="date" name="" id=""></small>
+                </div>
+                <div class="card-footer">
+                    End Date: <small class="text-muted"><input type="date" name="" id=""></small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
